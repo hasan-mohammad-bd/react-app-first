@@ -2,13 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const theNumber = 333;
-const singer = {name:"Hasan", address: "barisal"}
+const singer = { name: "Hasan", address: "barisal" };
 
 //another way to add style.
 const singerStyle = {
   color: "purple",
-  backgroundColor: "white"
-}
+  backgroundColor: "white",
+};
 
 /* 
 JSX =>
@@ -33,17 +33,28 @@ function App() {
         </p>
         {/* here dont need to use "$" to declare template sting's variable. */}
         <p style={singerStyle}>name: {theNumber}</p>
-        <p style= {{backgroundColor:"red",color:"yellow"}}>name: {singer.name} </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p style={{ backgroundColor: "red", color: "yellow" }}>
+          name: {singer.name}{" "}
+        </p>
+        {/* the capital latter is used to identified  
+        .the function name is declared as html tag*/}
+        <Person name="Hasan Mohammad" anotherName="Emad Khan"></Person>
+        <Person name="hello"></Person>
+        <h2 className="container">this is the new component</h2>
+        <Person></Person>
       </header>
+    </div>
+  );
+}
+
+//this is how a component is declared in react.
+function Person(props) {
+  console.log(props);
+  return (
+    <div className="person-style">
+      <h1>{props.name}</h1>
+      <h2>{props.anotherName}</h2>
+      <p>Profession: Cricket</p>
     </div>
   );
 }

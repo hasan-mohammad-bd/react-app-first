@@ -44,3 +44,11 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.person-style{
+  background-color: blue;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+}
