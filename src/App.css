@@ -40,4 +40,7 @@
 
 .container {
   color: red;
+  background-color: #305ebb;
+  padding: 10px;
+  border-radius: 10px;
 }
